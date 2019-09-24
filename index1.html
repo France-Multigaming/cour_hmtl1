@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+
+        <style>
+        nav{
+            margin-right:5px;
+            position:absolute;
+            right:10px;
+            top:10px;
+        }
+        .nav{
+            display: inline;
+        }
+        #logo{
+            position:absolute;
+            left:10px;
+            top:10px;
+        }
+        #name {
+            top:75px;
+            text-align: center;
+        }
+        #names {
+            text-align: center;
+            top:110px;
+        }
+        #bouton1{
+            margin-top: 44%;
+            position: absolute;
+            top:60px;
+        }
+        #bouton2{
+            margin-left: 56%;
+            position: absolute;
+            top:60px;
+        }
+
+        
+        </style>
+        
+        
+        
+            <nav>
+            
+                <ul>
+
+                    <li class="nav"><a href="Acceuil.html"><strong>Acceuil</strong></a></li>
+                    <li class="nav"><a href="Compagnie.html"><strong>Compagnie</strong></a></li>
+                    <li class="nav"><a href="Autres.html"><strong>Autres</strong></a></li>
+                    <li class="nav"><a href="Contact.html"><strong>Contact</strong></a></li>
+
+                </ul>
+
+            </nav>
+
+            <script>
+                    var groupe = [
+                      "<br>Benjamin Gouget",
+                      "<br>Florian Farris",
+                      "<br>Said Zenafi",
+                      "<br>Yannis Aouachria",
+                      "<br>Pierre Denaes",
+                      "<br>Morgan Trainoir",
+                      "<br>Coralie Damery",
+                      "<br>Quentin Robert",
+                      "<br>Alexandre Chauvet",
+                      "<br>Sebastien Cartoux",
+                      "<br>Davis Haas",
+                      "<br>Sofiane Sotehi",
+                      "<br>Yoan Baldacchino",
+                      "<br>Nicolas Degabriel",
+                      "<br>Ayman Bratzu",
+                      "<br>Quentin Queffuris",
+                      "<br>Killian Pasquier",
+                      "<br>Jérôme Laurent",
+                      "<br>Jean-Daniel Pontremoli",
+                      "<br>Marjorie Ngoupende",
+                      "<br>Christophe Coutures",
+                      "<br>Michel Christophe"
+                    ];
+                    var randomName = function () {
+                    document.getElementById("name").innerHTML = groupe [Math.floor(Math.random() * groupe.length)]
+                    }
+
+                    var all = function () {
+                        document.getElementById('names').innerHTML = "";
+                        var ul = document.createElement('ul');
+                            document.getElementById('names').appendChild(ul);
+
+                            group.forEach(function(x){
+                            var li = document.createElement('li');
+                            ul.appendChild(li);
+                            li.innerHTML += x;
+                            });
+                    }
+                    </script>
+        </head>
+        <body>
+            <button id="bouton1" onclick="randomName()">Afficher un</button>
+            <button id="bouton2" onclick="all()">Afficher tous</button>
+            <div id="name"></div>
+            <div id="names"></div>
+            <p align="center" >Mon texte d'essai</p>
+    </body>
+
+</html>
